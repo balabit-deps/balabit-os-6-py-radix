@@ -1,0 +1,10 @@
+--- a/radix_python.c
++++ b/radix_python.c
+@@ -95,6 +95,7 @@ RadixNode_dealloc(RadixNodeObject *self)
+ 	Py_XDECREF(self->family);
+ 	Py_XDECREF(self->network);
+ 	Py_XDECREF(self->prefix);
++	Py_XDECREF(self->packed);
+ 	PyObject_Del(self);
+ }
+ 
